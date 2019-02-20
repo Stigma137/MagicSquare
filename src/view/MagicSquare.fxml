@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MagicSquareController">
+  <tabs>
+    <Tab text="Order and Direction">
+      <content>
+        <AnchorPane fx:id="anchB" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="comboBox1" layoutX="60.0" layoutY="76.0" onAction="#selectOrder" prefHeight="25.0" prefWidth="135.0" />
+                  <ComboBox fx:id="comboBox2" layoutX="408.0" layoutY="76.0" onAction="#selectDirection" prefHeight="25.0" prefWidth="139.0" />
+                  <Label layoutX="112.0" layoutY="51.0" text="Order" />
+                  <Label layoutX="453.0" layoutY="51.0" text="Direction" />
+                  <Label fx:id="label1" layoutX="150.0" layoutY="178.0" prefHeight="78.0" prefWidth="187.0" text="Magic Constant:" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Italic" size="25.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="text1" alignment="CENTER" editable="false" layoutX="329.0" layoutY="205.0" opacity="0.83" />
+                  <ComboBox fx:id="comboBox3" layoutX="232.0" layoutY="76.0" onAction="#selectInitial" prefHeight="25.0" prefWidth="137.0" />
+                  <Label contentDisplay="BOTTOM" layoutX="222.0" layoutY="51.0" prefHeight="17.0" prefWidth="157.0" text="Initial Perimeter Row/Column" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="tabB" text="Magic Square">
+      <content>
+        <AnchorPane fx:id="anchB" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
