@@ -11,12 +11,23 @@ public class MagicSquare {
 	 * @param n that indicates the magic square order.
 	*/
 	public void setOrder(int n) {
-		this.n = n;
+		if (n%2==0 || n < 0) {
+			this.n = 0;
+		}
+		else {
+			this.n = n;
+		}
+	}
+	/* Method that allows to get the order of the magic square.
+	 * @return A number that indicates the magic square order.
+	*/
+	public int getOrder() {
+		return n;
 	}
 	/* Method that allows to set the order of the magic square.
 	 * @return A number that indicates the magic constant.
 	*/
 	public int getMagicConstant() {
 		return (n*(n*n+1))/2;
-	}	
+	}
 }	
